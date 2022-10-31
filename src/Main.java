@@ -10,5 +10,6 @@ public class Main {
         }
         Person oldPerson = new Person(67);
         Person youngPerson = new Person(6);
+        Person young2 = new Person(62);
     }
 }
