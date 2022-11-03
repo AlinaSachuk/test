@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.HashSet;
 import java.util.LinkedList;
 
@@ -36,12 +37,23 @@ public class Ex13 {
         persons.add(person1);
         persons.add(person2);
         persons.add(person3);
-        for (PersonEx13 person : persons){
+        for (PersonEx13 person : persons) {
             System.out.println(person);
         }
         persons.remove(person1);
         persons.remove(person2);
         System.out.println(persons.contains(person3));
         System.out.println(persons);
+        System.out.println("Task 4");
+        HashMap<Integer, String> countryMap = new HashMap<>();
+        countryMap.put(1, "USA");
+        countryMap.put(2, "UK");
+        countryMap.put(3, "South Africa");
+        countryMap.remove(2);
+        countryMap.remove(1);
+        System.out.println(countryMap.get(3));
+        System.out.println(countryMap.keySet());
+        System.out.println(countryMap.values());
+        System.out.println(countryMap.isEmpty());
     }
 }
