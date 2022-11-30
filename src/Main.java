@@ -1,15 +1,17 @@
 import java.util.Arrays;
 
 public class Main {
-    public static void main(String[] args) {
-        try {
-            int[] array = {1, 4, 8, 9, 14, 209, 466};
-            System.out.println(array[14]);
-        } catch (IndexOutOfBoundsException exception){
-            System.out.println("Тут ошибка");
+    public static void main(String[] args) throws InterruptedException {
+        System.out.println("Start");
+        for (int i = 0; i < 1; i++){
+            Thread thread = new Thread(new Ex19());
+            thread.start();
+            thread.join();
         }
-        Person oldPerson = new Person(67);
-        Person youngPerson = new Person(6);
-        Person young2 = new Person(62);
+        System.out.println("The end!");
+        Thread thread2 = new Thread(new Ex19());
+        thread2.setDaemon(true);
+        thread2.start();
+        System.out.println("Final");
     }
 }
